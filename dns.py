@@ -1,4 +1,5 @@
 import socket, glob, json
+import signal, sys
 
 port = 53 # DNS operates on port 53 by default
 ip = '127.0.0.1' # loopback address
@@ -172,6 +173,13 @@ def build_response(data):
         dnsBody += rec_to_bytes(domainName, recType, record["ttl"], record["value"])
 
     return (dnsHeader + dnsQuestion + dnsBody) 
+
+def signal_handler(sig, frame):
+    print('Shutting down server...')
+    sock.close()
+    sys.exit(0)
+
+signal.signal(signal.SIGINT, signal_handler)
 
 while (1):
     data, addr = sock.recvfrom(512) # assume messages less than 512 bytes

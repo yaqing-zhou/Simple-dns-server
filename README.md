@@ -6,6 +6,7 @@ This repository contains a very simple DNS server implementation in Python to le
 
 1. Run `python3 dns.py` to start the DNS server.
 2. In a separate terminal window, use a DNS client such as `dig` to send queries to the DNS server.
+   - The `/zones` folder contains sample zone data for the DNS server. 
    - For example, to query for the IP address of `howcode.org`, run `dig howcode.org @127.0.0.1`. 
 
 ## Limitations

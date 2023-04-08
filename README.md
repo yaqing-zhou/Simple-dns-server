@@ -21,4 +21,4 @@ This implementation has the following limitations:
 
 ## Resources
 
-This implementation was based on the tutorial [here](https://www.pythonforbeginners.com/code-snippets-source-code/python-dns-server). 
+This implementation was based on the tutorial [here](https://youtube.com/playlist?list=PLBOh8f9FoHHhvO5e5HF_6mYvtZegobYX2). 
